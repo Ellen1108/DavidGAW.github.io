@@ -248,15 +248,15 @@
     <link href="http://gengaiwei.com/2018/01/31/React/"/>
     <id>http://gengaiwei.com/2018/01/31/React/</id>
     <published>2018-01-31T01:53:44.000Z</published>
-    <updated>2018-08-16T08:34:52.083Z</updated>
+    <updated>2018-08-30T03:44:32.136Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>创建新应用<br>Create React App 是开始构建新的 React 单页面应用的最佳途径。 它可以帮你配置开发环境，以便你可以使用最新的 JavaScript 特性，还能提供很棒的开发体验，并为生产环境优化你的应用。</p><p>npm install -g create-react-app<br>create-react-app my-app</p><p>cd my-app<br>npm start</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>创建新应用吧，嗯<br>Create React App 是开始构建新的 React 单页面应用的最佳途径。 它可以帮你配置开发环境，以便你可以使用最新的 JavaScript 特性，还能提供很棒的开发体验，并为生产环境优化你的应用。</p><p>npm install -g create-react-app<br>create-react-app my-app</p><p>cd my-app<br>npm start</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;创建新应用&lt;br&gt;Create React App 是开始构建新的 
+        &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;创建新应用吧，嗯&lt;br&gt;Create React App 是开始构建
       
     
     </summary>

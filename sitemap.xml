@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/2018/01/31/React/</loc>
+    
+    <lastmod>2018-08-30T03:44:32.136Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2018/08/30/wx-chooseimg-video/</loc>
     
     <lastmod>2018-08-30T02:11:58.405Z</lastmod>
@@ -30,13 +37,6 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/categories/index.html</loc>
-    
-    <lastmod>2018-08-16T08:34:52.092Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gengaiwei.com/about/index.html</loc>
     
     <lastmod>2018-08-16T08:34:52.092Z</lastmod>
@@ -44,14 +44,21 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
+    <loc>http://gengaiwei.com/categories/index.html</loc>
+    
+    <lastmod>2018-08-16T08:34:52.092Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/06/nodejs4/</loc>
     
     <lastmod>2018-08-16T08:34:52.090Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/06/nodejs4/</loc>
+    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
     
     <lastmod>2018-08-16T08:34:52.090Z</lastmod>
     
@@ -72,14 +79,14 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
+    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
     
     <lastmod>2018-08-16T08:34:52.083Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
+    <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
     
     <lastmod>2018-08-16T08:34:52.083Z</lastmod>
     
@@ -94,13 +101,6 @@
   
   <url>
     <loc>http://gengaiwei.com/2018/08/16/hello-world/</loc>
-    
-    <lastmod>2018-08-16T08:34:52.083Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/01/31/React/</loc>
     
     <lastmod>2018-08-16T08:34:52.083Z</lastmod>
     
