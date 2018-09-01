@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/2018/09/01/wxChoose/</loc>
+    
+    <lastmod>2018-09-01T09:49:28.708Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2018/01/31/React/</loc>
     
     <lastmod>2018-09-01T09:45:00.900Z</lastmod>
@@ -23,14 +30,14 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/about/index.html</loc>
+    <loc>http://gengaiwei.com/categories/index.html</loc>
     
     <lastmod>2018-08-16T08:34:52.092Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/categories/index.html</loc>
+    <loc>http://gengaiwei.com/about/index.html</loc>
     
     <lastmod>2018-08-16T08:34:52.092Z</lastmod>
     
@@ -65,13 +72,6 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
-    
-    <lastmod>2018-08-16T08:34:52.083Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
     
     <lastmod>2018-08-16T08:34:52.083Z</lastmod>
@@ -80,6 +80,13 @@
   
   <url>
     <loc>http://gengaiwei.com/2018/08/16/hello-world/</loc>
+    
+    <lastmod>2018-08-16T08:34:52.083Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
     
     <lastmod>2018-08-16T08:34:52.083Z</lastmod>
     
