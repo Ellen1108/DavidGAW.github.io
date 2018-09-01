@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gengaiwei.com/"/>
-  <updated>2018-09-01T09:49:28.708Z</updated>
+  <updated>2018-08-16T08:34:52.083Z</updated>
   <id>http://gengaiwei.com/</id>
   
   <author>
@@ -15,28 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>wxChoose</title>
-    <link href="http://gengaiwei.com/2018/09/01/wxChoose/"/>
-    <id>http://gengaiwei.com/2018/09/01/wxChoose/</id>
-    <published>2018-09-01T09:49:04.000Z</published>
-    <updated>2018-09-01T09:49:28.708Z</updated>
-    
-    <content type="html"><![CDATA[<p>###aaqq</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;###aaqq&lt;/p&gt;
-
-      
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Hi Man</title>
@@ -58,6 +36,31 @@
     
     
       <category term="Hexo" scheme="http://gengaiwei.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wxChoose</title>
+    <link href="http://gengaiwei.com/2018/03/05/wxChoose/"/>
+    <id>http://gengaiwei.com/2018/03/05/wxChoose/</id>
+    <published>2018-03-05T02:41:29.000Z</published>
+    <updated>2018-09-01T10:04:18.661Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="微信小程序上传图片，需要先把图片传到服务器"><a href="#微信小程序上传图片，需要先把图片传到服务器" class="headerlink" title="微信小程序上传图片，需要先把图片传到服务器"></a>微信小程序上传图片，需要先把图片传到服务器</h3><blockquote><p>1、 wxml</p></blockquote><pre><code>&lt;view class=&apos;up_image&apos;&gt;    &lt;view bindtap=&quot;upload&quot;&gt;上传图片&lt;/view&gt;    &lt;view class=&apos;image-item&apos;  wx:for=&quot;{{tempFilePaths}}&quot; wx:key=&quot;{{index}}&quot; &gt;        &lt;image class=&apos;image&apos; src=&apos;{{item}}&apos; data-index=&quot;{{index}}&quot;&gt;&lt;/image&gt;        &lt;!-- 删除按钮 --&gt;        &lt;view class=&apos;dele_item&apos; bindtap=&apos;dele_image&apos;&gt;X&lt;/view&gt;    &lt;/view&gt;    &lt;/view&gt;    &lt;view class=&apos;up_video&apos;&gt;    &lt;view bindtap=&apos;addVideo&apos;&gt;上传视频&lt;/view&gt;    &lt;view class=&apos;video-item&apos; wx:for=&quot;{{videoPaths}}&quot; wx:key=&quot;{{index}}&quot; &gt;        &lt;video src=&apos;{{item}}&apos; data-index=&quot;{{index}}&quot;&gt;&lt;/video&gt;        &lt;!-- 删除视频的按钮 --&gt;        &lt;view class=&apos;dele_item&apos; bindtap=&apos;dele_video&apos;&gt;X&lt;/view&gt;    &lt;/view&gt;&lt;/view&gt;</code></pre><blockquote><p>2、wxss</p></blockquote><pre><code>.up_image,.up_video{    text-align: center;    font-size: 0.8rem;    width: 100%;    margin: 10% auto;}.image{    width: 5rem;    height: 5rem;    display: inline-block;    margin: 0.8rem;}.video-item,.image-item{    position: relative;}.dele_item{    width: 2rem;    height: 2rem;    text-align: center;    line-height: 2rem;    color: #fff;    background:red;    position: absolute;    top: 0px;    right: 0px;}</code></pre><blockquote><p>3、js</p></blockquote><pre><code>Page({    data: {        imageVideoNumber:&apos;&apos;,        imagePicid:&apos;&apos;,        tempFilePaths:[],        videoPaths:[],        videoid:&apos;&apos;,    },// 上传图片方法=========upload: function () {    let that = this;    if ((that.data.imageVideoNumber) &lt; 9) {    wx.chooseImage({        count: 9 - (that.data.imageVideoNumber), // 默认9 imageVideoNumber 记录图片和视频已经上传的数量        sizeType: [&apos;original&apos;, &apos;compressed&apos;], // 可以指定是原图还是压缩图，默认二者都有        sourceType: [&apos;album&apos;, &apos;camera&apos;], // 可以指定来源是相册还是相机，默认二者都有        success: res =&gt; {        wx.showLoading({            title: &apos;上传中...&apos;,        })        let tempFilePaths = res.tempFilePaths;        let newtempFilePaths = res.tempFilePaths; //用于上传服务器的时候 循环新的图片数组        let arr = that.data.tempFilePaths;        tempFilePaths = tempFilePaths.concat(arr) //拼接数组的方法        that.setData({            imageVideoNumber: tempFilePaths.length + that.data.videoPaths.length,            tempFilePaths: tempFilePaths //用于页面中显示的图片路径        })        /*** 上传完成后把文件上传到服务器 */        var count = 0;        for (var i = 0; i &lt; newtempFilePaths.length; i++) {            wx.uploadFile({            url: 你需要上传到服务器的urls,            filePath: tempFilePaths[i],            name: &apos;uploadfile_ant&apos;,            header: {                &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,                &quot;Accept&quot;: &quot;application/vnd.epet.v1+json&quot;,            },            success: function (res) {                count++;                if (res.statusCode == 200) {                wx.hideLoading()                wx.showModal({                    title: &apos;提示&apos;,                    content: &apos;上传成功&apos;,                    showCancel: false,                    success: function (res) {                    }                })                var imagePicid = res.data;                that.data.imagePicid.push(imagePicid)                that.setData({                    imagePicid: that.data.imagePicid //这个以什么方式传给后台，与后台商议，这里传的是ID                })                } else {                wx.hideLoading();                wx.showModal({                    title: &apos;错误提示&apos;,                    content: &apos;上传图片失败&apos;,                    showCancel: false,                    success: function (res) {                    }                })                }                //如果是最后一张,则隐藏等待中                  if (count == tempFilePaths.length) {                wx.hideToast();                }            },            fail: function (res) {                wx.hideToast();                wx.hideLoading();                wx.showModal({                title: &apos;错误提示&apos;,                content: &apos;上传图片失败&apos;,                showCancel: false,                success: function (res) {                }                })            }            });        }        }    })    } else {    wx.showModal({        title: &apos;提示&apos;,        content: &apos;上传数量已达上限&apos;,        showCancel: false,        success: function (res) {        }    })    }},// 删除图片的方法dele_image: function (e) {    var that = this;    var tempFilePaths = that.data.tempFilePaths;    var imagePicid = that.data.imagePicid; //这里的ID是后台返回你的，用于记录给后台传的ID值，如果没有上传成功后台是不会返回的，那删除就不会有作用，视频同理    var index = e.currentTarget.dataset.index;//获取当前长按图片下标    wx.showModal({    title: &apos;提示&apos;,    content: &apos;确定要删除此图片吗？&apos;,    success: function (res) {        if (res.confirm) {        console.log(&apos;点击确定了&apos;);        tempFilePaths.splice(index, 1);         imagePicid.splice(index, 1);        } else if (res.cancel) {        console.log(&apos;点击取消了&apos;);        return false;        }        that.setData({        tempFilePaths: tempFilePaths,        imageVideoNumber: that.data.imageVideoNumber - 1,        imagePicid: imagePicid        });        // console.log(that.data.tempFilePaths)        // console.log(that.data.imageVideoNumber)        // console.log(that.data.imagePicid)    }    })},// 上传视频方法==== 同理上传图片=====addVideo: function () {    var that = this    if ((that.data.imageVideoNumber) &lt; 9) {    wx.chooseVideo({        sourceType: [&apos;album&apos;, &apos;camera&apos;],        maxDuration: 60,        camera: [&apos;front&apos;, &apos;back&apos;],        success: function (res) {        wx.showLoading({            title: &apos;上传中...&apos;,        })        let videoPaths = res.tempFilePath;        that.data.videoPaths.push(videoPaths)        that.setData({            imageVideoNumber: that.data.imageVideoNumber + 1,            videoPaths: that.data.videoPaths,        })        var count = 0;        wx.uploadFile({            url: &apos;你需要上传到服务器的urls&apos;,            filePath: videoPaths,            name: &apos;uploadfile_ant&apos;,            header: {            &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,            &quot;Accept&quot;: &quot;application/vnd.epet.v1+json&quot;,            },            success: function (res) {            count++;            if (res.statusCode == 200) {                wx.hideLoading()                wx.showModal({                title: &apos;提示&apos;,                content: &apos;上传成功&apos;,                showCancel: false,                success: function (res) {                }                })                var videoid = res.data;                that.data.videoid.push(videoid)                that.setData({                videoid: that.data.videoid                })            } else {                wx.hideLoading();                wx.showModal({                title: &apos;错误提示&apos;,                content: &apos;上传视频失败&apos;,                showCancel: false,                success: function (res) {                }                })            }            //如果是最后一张,则隐藏等待中              if (count == videoPaths.length) {                wx.hideToast();            }            },            fail: function (res) {            wx.hideToast();            wx.hideLoading();            wx.showModal({                title: &apos;错误提示&apos;,                content: &apos;上传视频失败&apos;,                showCancel: false,                success: function (res) {                }            })            }        });        }    });    } else {    wx.showModal({        title: &apos;提示&apos;,        content: &apos;上传数量已达上限&apos;,        showCancel: false,        success: function (res) {        }    })    }},// 删除视频的方法dele_video: function (e) {    var that = this;    var videoPaths = that.data.videoPaths;    var videoid = that.data.videoid;    var index = e.currentTarget.dataset.index;//获取当前长按图片下标    wx.showModal({    title: &apos;提示&apos;,    content: &apos;确定要删除此视频吗？&apos;,    success: function (res) {        if (res.confirm) {        console.log(&apos;点击确定了&apos;);        videoPaths.splice(index, 1);        videoid.splice(index, 1);        } else if (res.cancel) {        console.log(&apos;点击取消了&apos;);        return false;        }        that.setData({        videoPaths: videoPaths,        imageVideoNumber: that.data.imageVideoNumber - 1,        videoid: videoid        });        // console.log(that.data.videoPaths)        // console.log(that.data.imageVideoNumber)        // console.log(that.data.imagePicid)    }    })    },})</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;微信小程序上传图片，需要先把图片传到服务器&quot;&gt;&lt;a href=&quot;#微信小程序上传图片，需要先把图片传到服务器&quot; class=&quot;headerlink&quot; title=&quot;微信小程序上传图片，需要先把图片传到服务器&quot;&gt;&lt;/a&gt;微信小程序上传图片，需要先把图片传到服务器&lt;/
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="“WX”" scheme="http://gengaiwei.com/tags/%E2%80%9CWX%E2%80%9D/"/>
     
   </entry>
   
