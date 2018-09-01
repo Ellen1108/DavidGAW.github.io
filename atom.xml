@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gengaiwei.com/"/>
-  <updated>2018-08-30T02:11:58.405Z</updated>
+  <updated>2018-08-16T08:34:52.083Z</updated>
   <id>http://gengaiwei.com/</id>
   
   <author>
@@ -15,34 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>wx-chooseimg-video</title>
-    <link href="http://gengaiwei.com/2018/08/30/wx-chooseimg-video/"/>
-    <id>http://gengaiwei.com/2018/08/30/wx-chooseimg-video/</id>
-    <published>2018-08-30T02:11:58.000Z</published>
-    <updated>2018-08-30T02:11:58.405Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>wx-login</title>
-    <link href="http://gengaiwei.com/2018/08/30/wx-login/"/>
-    <id>http://gengaiwei.com/2018/08/30/wx-login/</id>
-    <published>2018-08-30T02:00:35.000Z</published>
-    <updated>2018-08-30T02:00:35.823Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>Hi Man</title>
