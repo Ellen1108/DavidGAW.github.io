@@ -40,6 +40,56 @@
   </entry>
   
   <entry>
+    <title>wx-onPullDownRefresh-onReachBottom</title>
+    <link href="http://gengaiwei.com/2018/03/06/wx-onPullDownRefresh-onReachBottom/"/>
+    <id>http://gengaiwei.com/2018/03/06/wx-onPullDownRefresh-onReachBottom/</id>
+    <published>2018-03-06T02:30:13.000Z</published>
+    <updated>2018-09-04T05:54:26.445Z</updated>
+    
+    <content type="html"><![CDATA[<h5 id="微信小程序的上拉下滑，第一次展示的数据是在onLoad中-执行数据接口，展示数据列表，当用户上拉下滑的时候执行onPullDownRefresh-onReachBottom"><a href="#微信小程序的上拉下滑，第一次展示的数据是在onLoad中-执行数据接口，展示数据列表，当用户上拉下滑的时候执行onPullDownRefresh-onReachBottom" class="headerlink" title="微信小程序的上拉下滑，第一次展示的数据是在onLoad中 执行数据接口，展示数据列表，当用户上拉下滑的时候执行onPullDownRefresh/onReachBottom"></a>微信小程序的上拉下滑，第一次展示的数据是在onLoad中 执行数据接口，展示数据列表，当用户上拉下滑的时候执行onPullDownRefresh/onReachBottom</h5><blockquote><ol><li>初次渲染数据列表</li></ol></blockquote><pre><code>wx.request({  url: &apos;your url&apos;,  method: &apos;GET&apos;,  header: {    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,    Accept: &apos;application/vnd.epet.v1+json&apos;,  },  success: function (res) {    console.log(res)    let shareData = res.data.data    let meta = res.data.meta    that.setData({      shareData: shareData,      meta: meta, //后台    });    if (res.statusCode == 200) {      wx.hideLoading();    } else {      wx.hideLoading();      wx.showToast({        title: &apos;加载失败&apos;,        duration: 0,        mask: true,        success: function (res) { },      })    }  },  fail: function (res) {    wx.hideLoading();    wx.showToast({      title: &apos;加载失败&apos;,      icon: &apos;err&apos;,      duration: 2000    });  }});</code></pre><blockquote><ol start="2"><li>上拉拉到第一页，调用后台接口，返回第一页数据列表</li></ol></blockquote><pre><code>onPullDownRefresh: function () {    let that = this;    wx.showNavigationBarLoading();    wx.request({    url: &apos;your-url?page=1&apos;,    method: &apos;GET&apos;,    header: {        &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,        Token: wx.getStorageSync(&apos;openid&apos;),        Accept: &apos;application/vnd.epet.v1+json&apos;,    },    success: function (res) {        console.log(res)        let shareData = res.data.data        that.setData({        shareData: shareData        });        if (res.statusCode == 200) {        wx.hideLoading();        } else {        wx.hideLoading();        wx.showToast({            title: &apos;加载失败&apos;,            duration: 0,            mask: true,            success: function (res) { },        })        }    },    fail: function (res) {        wx.hideLoading();        wx.showToast({        title: &apos;加载失败&apos;,        icon: &apos;err&apos;,        duration: 2000        });    }    });},</code></pre><blockquote><ol start="3"><li>下滑，有的是后台返回页数，然后前端进行计算，或者后台在接口里是链接，这样直接判断链接</li></ol></blockquote><pre><code>onReachBottom: function () {    let that = this;    wx.showLoading({    title: &apos;加载中...&apos;,    })    console.log(that.data.meta.pagination.links.next)    if (that.data.meta.pagination.links.next) {    wx.request({        url: that.data.meta.pagination.links.next,        method: &apos;GET&apos;,        header: {        &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,        Token: wx.getStorageSync(&apos;openid&apos;),        Accept: &apos;application/vnd.epet.v1+json&apos;,        },        success: function (res) {        console.log(res)        var aftherlist = that.data.shareData        var meta = res.data.meta        for (var i = 0; i &lt; res.data.data.length; i++) {            aftherlist.push(res.data.data[i])        }        that.setData({            shareData: aftherlist,            meta: meta        });        if (res.statusCode == 200) {            wx.hideLoading();        } else {            wx.hideLoading();            wx.showToast({            title: &apos;加载失败&apos;,            duration: 0,            mask: true,            success: function (res) { },            })        }        },        fail: function (res) {        wx.hideLoading();        wx.showToast({            title: &apos;加载失败&apos;,            icon: &apos;err&apos;,            duration: 2000        });        }    });    } else {    console.log(that.data.meta.pagination.links.next)    wx.showToast({        title: &apos;没有更多数据了&apos;,        mask: true,    })    }},</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h5 id=&quot;微信小程序的上拉下滑，第一次展示的数据是在onLoad中-执行数据接口，展示数据列表，当用户上拉下滑的时候执行onPullDownRefresh-onReachBottom&quot;&gt;&lt;a href=&quot;#微信小程序的上拉下滑，第一次展示的数据是在onLoad中-执行数据接
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wxPicker</title>
+    <link href="http://gengaiwei.com/2018/03/04/wxPicker/"/>
+    <id>http://gengaiwei.com/2018/03/04/wxPicker/</id>
+    <published>2018-03-04T05:03:12.000Z</published>
+    <updated>2018-09-04T01:38:57.907Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="底部弹出分类选项，选中之后，得到后台返回的ID"><a href="#底部弹出分类选项，选中之后，得到后台返回的ID" class="headerlink" title="底部弹出分类选项，选中之后，得到后台返回的ID"></a>底部弹出分类选项，选中之后，得到后台返回的ID</h3><blockquote><ol><li>wxml </li></ol></blockquote><pre><code>&lt;picker  bindchange=&quot;bindCategory&quot;  name=&quot;category_id&quot; value=&quot;{{category_index}}&quot; range=&quot;{{category}}&quot; &gt;    &lt;view class=&quot;picker&quot; &gt;        &lt;text style=&apos;color:#888;padding-right:5%;&apos;&gt;分类&lt;/text&gt;{{category[category_index]}}    &lt;/view&gt;    &lt;image class=&apos;dowm-btn&apos; src=&apos;一个向下箭头的图片&apos;&gt;&lt;/image&gt;&lt;/picker&gt;</code></pre><blockquote><ol start="2"><li>wxss</li></ol></blockquote><pre><code>.fl{background: #fff;height: 45px;line-height: 45px;padding-left: 5%;font-size: 0.8rem;}.picker{width: 85%;display: inline-block;}.dowm-btn{width: 1rem;height: 1rem;vertical-align: middle;}</code></pre><blockquote><ol start="3"><li>js 这里只是得到了选中的本身自带的ID，可能并不是后台给你的ID</li></ol></blockquote><pre><code>bindCategory: function (e) {    var that =this    that.setData({    category_index: e.detail.value    })},</code></pre><blockquote><ol start="4"><li>一般的选择分类，一般都是包含在一个大的表单里，要提交到后台提供的接口里，So ,wxml</li></ol></blockquote><pre><code>&lt;form bindsubmit=&apos;submitForm&apos;&gt; //这里包含各种表单，for example：input ,checkbox ,radio etc. &lt;picker  bindchange=&quot;bindCategory&quot;  name=&quot;category_id&quot; value=&quot;{{category_index}}&quot; range=&quot;{{category}}&quot; &gt;     &lt;view class=&quot;picker&quot; &gt;         &lt;text style=&apos;color:#888;padding-right:5%;&apos;&gt;分类&lt;/text&gt;{{category[category_index]}}     &lt;/view&gt;     &lt;image class=&apos;dowm-btn&apos; src=&apos;一个向下箭头的图片&apos;&gt;&lt;/image&gt; &lt;/picker&gt; &lt;view class=&apos;submitForm&apos;&gt;     &lt;button class=&apos;submitbtn&apos; form-type=&apos;submit&apos; &gt;发布&lt;/button&gt; &lt;/view&gt;&lt;/form&gt;</code></pre><blockquote><ol start="5"><li>选取分类，得到的ID是当前标签本身的index，并不是后台返回的ID，So,在分类的接口回调中，把分类的name与ID分别存下来，然后，在提交表单的时候，把当前分类自带的ID替换为后台提供的ID</li></ol></blockquote><pre><code>//分类接口wx.request({  url: ‘分类接口&apos;,  method: &apos;GET&apos;,  header: {    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,    Token: wx.getStorageSync(&apos;openid&apos;),//    Accept: &apos;application/vnd.epet.v1+json&apos;,  },  success: function (res) {    let category = res.data.data    var id_arr=[];    var name_arr = [];    for (var i = 0; i &lt; category.length; i++) {      id_arr[i] = category[i].id      name_arr[i] = category[i].name;    }    that.setData({      category: name_arr,      category_idlist: id_arr    });  },  fail: function (res) {    wx.hideLoading();    wx.showToast({      title: &apos;加载失败&apos;,      icon: &apos;err&apos;,      duration: 2000    });  }});</code></pre><blockquote><ol start="6"><li>在提交表单时，更换为后台提供的分类对应的ID</li></ol></blockquote><pre><code>// 上传所有数据===========submitForm: function (e) {    var that = this    e.detail.value.category_id = that.data.category_idlist[e.detail.value.category_id]    console.log(e.detail.value.category_id)    wx.request({    url: ‘提交表单的接口&apos;,    method: &apos;POST&apos;,    data: {               category_id: e.detail.value.category_id,    },    header: {        &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,        Token: wx.getStorageSync(&apos;openid&apos;),        Accept: &apos;application/vnd.epet.v1+json&apos;,    },    success: function (res) {        console.log(res)    },    fail: function (res) {    }    });},</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;底部弹出分类选项，选中之后，得到后台返回的ID&quot;&gt;&lt;a href=&quot;#底部弹出分类选项，选中之后，得到后台返回的ID&quot; class=&quot;headerlink&quot; title=&quot;底部弹出分类选项，选中之后，得到后台返回的ID&quot;&gt;&lt;/a&gt;底部弹出分类选项，选中之后，得到后
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>wx -- Swiper/轮播图/跑马灯</title>
     <link href="http://gengaiwei.com/2018/03/04/wxSwiper/"/>
     <id>http://gengaiwei.com/2018/03/04/wxSwiper/</id>
