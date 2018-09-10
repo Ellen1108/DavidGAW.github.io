@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/2018/03/01/jq-brightStars/</loc>
+    
+    <lastmod>2018-09-10T08:48:16.304Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/03/node-readdir/</loc>
+    
+    <lastmod>2018-09-06T03:25:41.288Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
+    
+    <lastmod>2018-09-06T03:25:28.581Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/05/nodejs2/</loc>
+    
+    <lastmod>2018-09-06T00:33:42.483Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2018/03/06/wx-onPullDownRefresh-onReachBottom/</loc>
     
     <lastmod>2018-09-04T05:54:26.445Z</lastmod>
@@ -47,13 +75,6 @@
     <loc>http://gengaiwei.com/2018/03/01/wxChoose/</loc>
     
     <lastmod>2018-09-03T12:25:18.662Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
-    
-    <lastmod>2018-09-03T03:09:04.091Z</lastmod>
     
   </url>
   
@@ -117,13 +138,6 @@
     <loc>http://gengaiwei.com/categories/index.html</loc>
     
     <lastmod>2018-08-16T08:34:52.092Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/05/nodejs2/</loc>
-    
-    <lastmod>2018-08-16T08:34:52.087Z</lastmod>
     
   </url>
   
