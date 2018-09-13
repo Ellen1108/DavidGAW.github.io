@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/about/index.html</loc>
+    
+    <lastmod>2018-09-13T03:16:01.139Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2018/03/01/jq-brightStars/</loc>
     
     <lastmod>2018-09-10T08:48:16.304Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://gengaiwei.com/2018/03/06/wx-onPullDownRefresh-onReachBottom/</loc>
     
     <lastmod>2018-09-04T05:54:26.445Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/about/index.html</loc>
-    
-    <lastmod>2018-09-04T02:49:33.271Z</lastmod>
     
   </url>
   
