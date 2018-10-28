@@ -2,149 +2,135 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://gengaiwei.com/about/index.html</loc>
+    <loc>http://gengaiwei.com/2018/03/10/wxPicker/</loc>
     
-    <lastmod>2018-09-13T03:43:55.513Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/01/jq-brightStars/</loc>
-    
-    <lastmod>2018-09-10T08:48:16.304Z</lastmod>
+    <lastmod>2018-10-28T07:05:35.644Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/03/node-readdir/</loc>
+    <loc>http://gengaiwei.com/2018/03/08/wxSwiper/</loc>
     
-    <lastmod>2018-09-06T03:25:41.288Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
-    
-    <lastmod>2018-09-06T03:25:28.581Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/05/nodejs2/</loc>
-    
-    <lastmod>2018-09-06T00:33:42.483Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/06/wx-onPullDownRefresh-onReachBottom/</loc>
-    
-    <lastmod>2018-09-04T05:54:26.445Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/04/wxPicker/</loc>
-    
-    <lastmod>2018-09-04T01:38:57.907Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/03/wxWaterfall/</loc>
-    
-    <lastmod>2018-09-03T12:25:36.953Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/04/wxSwiper/</loc>
-    
-    <lastmod>2018-09-03T12:25:32.249Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/02/wxLogin/</loc>
-    
-    <lastmod>2018-09-03T12:25:25.065Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/01/wxChoose/</loc>
-    
-    <lastmod>2018-09-03T12:25:18.662Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/06/nodejs4/</loc>
-    
-    <lastmod>2018-09-03T02:32:21.988Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/04/nodejs3/</loc>
-    
-    <lastmod>2018-09-03T02:32:16.471Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
-    
-    <lastmod>2018-09-03T02:30:47.325Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
-    
-    <lastmod>2018-09-03T02:29:37.367Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
-    
-    <lastmod>2018-09-03T02:29:34.170Z</lastmod>
+    <lastmod>2018-10-28T07:04:55.418Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://gengaiwei.com/2018/02/02/nodejs1/</loc>
     
-    <lastmod>2018-09-03T02:29:31.836Z</lastmod>
+    <lastmod>2018-10-28T07:03:12.290Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/05/wxWaterfall/</loc>
+    
+    <lastmod>2018-10-28T06:56:23.067Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/05/wx-onPullDownRefresh-onReachBottom/</loc>
+    
+    <lastmod>2018-10-28T06:35:41.479Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/01/wx-chooseimg-video/</loc>
+    
+    <lastmod>2018-10-28T06:28:17.471Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/05/wx-login/</loc>
+    
+    <lastmod>2018-10-28T06:20:50.212Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/about/index.html</loc>
+    
+    <lastmod>2018-10-28T06:10:44.270Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://gengaiwei.com/2018/01/31/React/</loc>
     
-    <lastmod>2018-09-01T09:45:00.900Z</lastmod>
+    <lastmod>2018-10-11T07:20:32.300Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://gengaiwei.com/tags/index.html</loc>
     
-    <lastmod>2018-08-16T08:34:52.093Z</lastmod>
+    <lastmod>2018-10-11T07:20:30.807Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://gengaiwei.com/categories/index.html</loc>
     
-    <lastmod>2018-08-16T08:34:52.092Z</lastmod>
+    <lastmod>2018-10-11T07:20:30.805Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/08/16/hello-world/</loc>
+    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
     
-    <lastmod>2018-08-16T08:34:52.083Z</lastmod>
+    <lastmod>2018-10-11T07:20:30.803Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/06/nodejs4/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.803Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/04/nodejs3/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.802Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/05/nodejs2/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.800Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/10/11/hello-world/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.796Z</lastmod>
     
   </url>
   
