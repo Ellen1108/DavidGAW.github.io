@@ -2,51 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://gengaiwei.com/2018/03/10/wxPicker/</loc>
+    <loc>http://gengaiwei.com/2018/03/01/wx-chooseimg-video/</loc>
     
-    <lastmod>2018-10-28T07:05:35.644Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/03/08/wxSwiper/</loc>
-    
-    <lastmod>2018-10-28T07:04:55.418Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/02/nodejs1/</loc>
-    
-    <lastmod>2018-10-28T07:03:12.290Z</lastmod>
+    <lastmod>2018-12-06T07:06:18.336Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://gengaiwei.com/2018/03/05/wxWaterfall/</loc>
     
-    <lastmod>2018-10-28T06:56:23.067Z</lastmod>
+    <lastmod>2018-12-06T07:06:07.103Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/03/05/wx-onPullDownRefresh-onReachBottom/</loc>
+    <loc>http://gengaiwei.com/2018/03/10/wxPicker/</loc>
     
-    <lastmod>2018-10-28T06:35:41.479Z</lastmod>
+    <lastmod>2018-12-06T07:05:57.972Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/03/01/wx-chooseimg-video/</loc>
+    <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
     
-    <lastmod>2018-10-28T06:28:17.471Z</lastmod>
+    <lastmod>2018-12-06T07:05:13.525Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/02/nodejs1/</loc>
+    
+    <lastmod>2018-12-06T07:04:49.365Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://gengaiwei.com/2018/03/05/wx-login/</loc>
     
-    <lastmod>2018-10-28T06:20:50.212Z</lastmod>
+    <lastmod>2018-12-06T07:00:01.898Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/08/wxSwiper/</loc>
+    
+    <lastmod>2018-12-06T06:59:49.804Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/05/wx-onPullDownRefresh-onReachBottom/</loc>
+    
+    <lastmod>2018-12-06T06:57:10.851Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/03/06/wx-comment/</loc>
+    
+    <lastmod>2018-12-06T06:55:54.598Z</lastmod>
     
   </url>
   
@@ -124,13 +138,6 @@
     <loc>http://gengaiwei.com/2018/10/11/hello-world/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
-    
-    <lastmod>2018-10-11T07:20:30.796Z</lastmod>
     
   </url>
   
