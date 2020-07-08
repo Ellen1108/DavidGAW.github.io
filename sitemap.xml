@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/about/index.html</loc>
+    
+    <lastmod>2020-07-08T00:54:19.476Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2019/04/02/gitBranch/</loc>
+    
+    <lastmod>2019-12-03T09:30:14.729Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/04/01/vueproject/</loc>
+    
+    <lastmod>2018-12-26T12:44:39.493Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2018/03/01/wx-chooseimg-video/</loc>
     
     <lastmod>2018-12-06T07:06:18.336Z</lastmod>
@@ -65,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/about/index.html</loc>
-    
-    <lastmod>2018-10-28T06:10:44.270Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gengaiwei.com/2018/01/31/React/</loc>
     
     <lastmod>2018-10-11T07:20:32.300Z</lastmod>
@@ -121,13 +135,6 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
-    
-    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
@@ -136,6 +143,13 @@
   
   <url>
     <loc>http://gengaiwei.com/2018/10/11/hello-world/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
     

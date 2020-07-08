@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gengaiwei.com/"/>
-  <updated>2018-10-11T07:20:30.797Z</updated>
+  <updated>2019-12-03T09:30:14.729Z</updated>
   <id>http://gengaiwei.com/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git分支使用</title>
+    <link href="http://gengaiwei.com/2019/04/02/gitBranch/"/>
+    <id>http://gengaiwei.com/2019/04/02/gitBranch/</id>
+    <published>2019-04-02T12:46:03.000Z</published>
+    <updated>2019-12-03T09:30:14.729Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://gengaiwei.com/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>Hi Man</title>
@@ -36,6 +52,31 @@
     
     
       <category term="Hexo" scheme="http://gengaiwei.com/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>vueproject</title>
+    <link href="http://gengaiwei.com/2018/04/01/vueproject/"/>
+    <id>http://gengaiwei.com/2018/04/01/vueproject/</id>
+    <published>2018-04-01T03:05:25.000Z</published>
+    <updated>2018-12-26T12:44:39.493Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h3><pre><code>vue init webpack &apos;projectname&apos; 用vue cli 初始化代码npm install 初始化代码及一切webpack配置 简化开发npm run dev 运行项目npm run build 发布打包项目</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;创建项目&quot;&gt;&lt;a href=&quot;#创建项目&quot; class=&quot;headerlink&quot; title=&quot;创建项目&quot;&gt;&lt;/a&gt;创建项目&lt;/h3&gt;&lt;pre&gt;&lt;code&gt;vue init webpack &amp;apos;projectname&amp;apos; 用vue cli 初始化代
+      
+    
+    </summary>
+    
+      <category term="vue2.0" scheme="http://gengaiwei.com/categories/vue2-0/"/>
+    
+    
+      <category term="“vue2.0”" scheme="http://gengaiwei.com/tags/%E2%80%9Cvue2-0%E2%80%9D/"/>
     
   </entry>
   
