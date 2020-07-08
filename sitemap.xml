@@ -2,9 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/2020/05/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A8%E5%B1%80CSS/</loc>
+    
+    <lastmod>2020-07-08T08:07:08.370Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2020/07/07/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%BD%BF%E7%94%A8-NPM/</loc>
+    
+    <lastmod>2020-07-08T08:02:48.521Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2020/07/08/TypeScript%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B/</loc>
+    
+    <lastmod>2020-07-08T07:22:40.547Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://gengaiwei.com/2018/02/02/nodejs1/</loc>
+    
+    <lastmod>2020-07-08T06:40:20.506Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/about/index.html</loc>
     
-    <lastmod>2020-07-08T00:54:19.476Z</lastmod>
+    <lastmod>2020-07-08T06:17:45.014Z</lastmod>
     
   </url>
   
@@ -47,13 +75,6 @@
     <loc>http://gengaiwei.com/2018/01/02/Git/</loc>
     
     <lastmod>2018-12-06T07:05:13.525Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/02/nodejs1/</loc>
-    
-    <lastmod>2018-12-06T07:04:49.365Z</lastmod>
     
   </url>
   
@@ -135,7 +156,7 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
+    <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
     
@@ -149,7 +170,7 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
+    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
     

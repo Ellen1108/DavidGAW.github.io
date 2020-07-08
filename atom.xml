@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gengaiwei.com/"/>
-  <updated>2019-12-03T09:30:14.729Z</updated>
+  <updated>2020-07-08T07:22:40.547Z</updated>
   <id>http://gengaiwei.com/</id>
   
   <author>
@@ -15,6 +15,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TypeScript（一）：认知与基础类型</title>
+    <link href="http://gengaiwei.com/2020/07/08/TypeScript%EF%BC%88%E4%B8%80%EF%BC%89%EF%BC%9A%E8%AE%A4%E7%9F%A5%E4%B8%8E%E5%9F%BA%E7%A1%80%E7%B1%BB%E5%9E%8B/"/>
+    <id>http://gengaiwei.com/2020/07/08/TypeScript（一）：认知与基础类型/</id>
+    <published>2020-07-08T06:22:11.000Z</published>
+    <updated>2020-07-08T07:22:40.547Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="TypeScript（一）：认知与基础类型"><a href="#TypeScript（一）：认知与基础类型" class="headerlink" title="TypeScript（一）：认知与基础类型"></a>TypeScript（一）：认知与基础类型</h3><p><img src="1.png" alt=""></p><blockquote><p>一、关于 TypeScript</p></blockquote><p><a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a> 是 JavaScript 的一个<code>超集</code>，主要提供了类型系统和对 ES6 的支持，由 Microsoft 开发，代码开源于 GitHub 上。此处是<a href="https://www.tslang.cn/docs/home.html" target="_blank" rel="noopener">中文文档</a><br><img src="2.png" alt=""></p><blockquote><p>二、TypeScript 的优缺点</p></blockquote><p><img src="3.png" alt=""><br><img src="4.png" alt=""></p><blockquote><p>三、安装与编译</p></blockquote><ol><li><p>安装：</p><pre><code>npm install -g typescript 或者cnpm install -g typescript 或者yarn global add typescript </code></pre></li><li>编译：<br> <code>tsc helloworld.ts =&gt; helloworld.js</code> ts 文件是不能直接运行的，能运行的是 js 文件</li><li><p>自动编译：</p><pre><code>tsc --init //生成 tsconfig.json 然后：终端 &gt; 运行任务 &gt; tsc 监视</code></pre></li></ol><blockquote><p>四、TypeScript 的基础类型</p></blockquote><p>为了使编写的代码更规范，更有利于维护，增加了类型校验，在typescript中主要有以下类型：<br><img src="5.png" alt=""></p><ul><li>Boolean 类型<br><img src="6.jpeg" alt=""></li><li>Number 类型<br><img src="7.jpeg" alt=""></li><li>String 类型<br><img src="8.jpeg" alt=""></li><li>Array 类型<br><img src="9.jpeg" alt=""></li><li>Tuple 类型<br>  数组一般由同种类型的值组成，但有时需要在单个变量中存储不同类型的值时,就可以使用元组。<br>  元组可用于定义具有有限数量的未命名属性的类型。每个属性都有一个关联的类型。使用元组时，必须提供每个属性的值：<br><img src="10.jpeg" alt=""></li><li><p>Enum 类型<br>  使用枚举我们可以定义一些带名字的常量，方便清晰地表达意图或创建一组有区别的用例。 TypeScript 支持数字的和基于字符串的枚举。</p><ul><li>数字枚举<br><img src="11.jpeg" alt=""><br>默认情况下，NORTH 的初始值为 0，其余的成员会从 1 开始自动增长。换句话说，Direction.SOUTH 的值为 1，Direction.EAST 的值为 2，Direction.WEST 的值为 3。<br>也可以设置 NORTH 的初始值：<br><img src="12.jpeg" alt=""></li><li><p>字符串枚举<br>在字符串枚举里，每个成员都必须用字符串字面量，或另外一个字符串枚举成员进行初始化。<br><img src="13.jpeg" alt=""></p></li><li><p>异构枚举<br>异构枚举的成员值是数字和字符串的混合：<br><img src="14.jpeg" alt=""></p></li></ul></li><li><p>Any 类型<br> 在 TypeScript 中，任何类型都可以被归为 any 类型。这让 any 类型成为了类型系统的顶级类型（也被称作<code>全局超级类型</code>）。<br> <img src="15.jpeg" alt=""></p><pre><code>在许多场景下过于宽松，所以使用 any 类型，可以很容易地编写类型正确但在运行时有问题的代码。如果我们使用 any 类型，就无法使用 TypeScript 提供的大量的保护机制。为了解决 any 带来的问题，TypeScript 3.0 引入了 unknown 类型。   </code></pre></li><li><p>Void 类型</p><p>当一个函数没有返回值时，其返回值类型是 void：<br><img src="16.jpeg" alt=""></p></li></ul><p>但声明一个 void 类型的变量没有什么作用，因为它的值只能为 <code>undefined</code> 或 <code>null</code>：</p><p><code>let unusable: void = undefined;</code></p><ul><li>Null 和 Undefined 类型</li></ul><pre><code>在TypeScript 里，undefined 和 null 两者有各自的类型分别为 undefined 和 null。</code></pre><p>默认情况下 null 和 undefined 是所有类型的子类型。 就是说可以把 null 和 undefined 赋值给 number 类型的变，但，如果你指定了–strictNullChecks 标记，null 和 undefined 只能赋值给 void 和它们各自的类型。</p><ul><li><p>Never 类型<br> never 类型表示的是那些永不存在的值的类型。 例如：会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型。<br><img src="17.jpeg" alt=""><br> 可以利用 never 类型的特性来实现全面性检查：<br><img src="18.jpeg" alt=""><br>假如后来有一天你的同事修改了 <code>WhatF</code> 的类型</p><pre><code>type WhatF = string | number | boolean;</code></pre><p> 使用 never 避免出现新增联合类型没有对应的情况，使类型更加健壮。</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;TypeScript（一）：认知与基础类型&quot;&gt;&lt;a href=&quot;#TypeScript（一）：认知与基础类型&quot; class=&quot;headerlink&quot; title=&quot;TypeScript（一）：认知与基础类型&quot;&gt;&lt;/a&gt;TypeScript（一）：认知与基础类型&lt;/
+      
+    
+    </summary>
+    
+      <category term="TypeScript" scheme="http://gengaiwei.com/categories/TypeScript/"/>
+    
+    
+      <category term="TypeScript" scheme="http://gengaiwei.com/tags/TypeScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序 使用 NPM</title>
+    <link href="http://gengaiwei.com/2020/07/07/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%BD%BF%E7%94%A8-NPM/"/>
+    <id>http://gengaiwei.com/2020/07/07/微信小程序-使用-NPM/</id>
+    <published>2020-07-07T10:59:00.000Z</published>
+    <updated>2020-07-08T08:02:48.521Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、微信小程序-·-使用-NPM"><a href="#一、微信小程序-·-使用-NPM" class="headerlink" title="一、微信小程序 · 使用 NPM"></a>一、微信小程序 · 使用 NPM</h3><blockquote><p>一、如果按文档走：</p></blockquote><pre><code>执行命令安装： npm install工具 -&gt; 构建 npm</code></pre><p>⚠️ 没有找到 node_modules 目录的话：是由于npm 还没有初始化</p><blockquote><p>二、解决如下：</p></blockquote><ol><li><p>在小程序根目录下执行命令：</p><pre><code>npm init  生成 package.json文件</code></pre></li><li><p>在继续安装你要安装的第三方包：</p><pre><code>npm i vant-weapp -S --production</code></pre></li><li><p>开发工具</p><pre><code>工具 -&gt; 构建 npm</code></pre></li><li><p>详情里面</p><pre><code>选中使用 npm 模块</code></pre></li><li><p>改 app.json</p><pre><code>将 app.json 中的 &quot;style&quot;: &quot;v2&quot; 去除，小程序的新版基础组件强行加上了许多样式，难以去除，不关闭将造成部分组件样式混乱。</code></pre></li></ol><blockquote><p> 三、应用：</p></blockquote><pre><code>// 通过 npm 安装// app.json&quot;usingComponents&quot;: {&quot;van-button&quot;: &quot;@vant/weapp/button/index&quot;}// 通过下载源码使用 es6版本// app.json&quot;usingComponents&quot;: {&quot;van-button&quot;: &quot;path/to/@vant/weapp/dist/button/index&quot;}// 通过下载源码使用 es5版本// app.json&quot;usingComponents&quot;: {&quot;van-button&quot;: &quot;path/to/@vant/weapp/lib/button/index&quot;}</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;一、微信小程序-·-使用-NPM&quot;&gt;&lt;a href=&quot;#一、微信小程序-·-使用-NPM&quot; class=&quot;headerlink&quot; title=&quot;一、微信小程序 · 使用 NPM&quot;&gt;&lt;/a&gt;一、微信小程序 · 使用 NPM&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;一
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="“WX”" scheme="http://gengaiwei.com/tags/%E2%80%9CWX%E2%80%9D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>微信小程序 使用全局CSS</title>
+    <link href="http://gengaiwei.com/2020/05/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A8%E5%B1%80CSS/"/>
+    <id>http://gengaiwei.com/2020/05/04/微信小程序全局CSS/</id>
+    <published>2020-05-04T10:45:12.000Z</published>
+    <updated>2020-07-08T08:07:08.370Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="一、微信小程序-·-使用全局CSS"><a href="#一、微信小程序-·-使用全局CSS" class="headerlink" title="一、微信小程序 · 使用全局CSS"></a>一、微信小程序 · 使用全局CSS</h3><blockquote><p>1、使用全局的app.css</p></blockquote><ul><li>app.wxss 是全局样式文件，对每个页面都起作用 如果某个页面不想要这个样式可以在那个页面再单独定义样式覆盖全局默认样式;</li><li>微信小程序样式可以 <code>@import</code>其他样式文件;</li><li>微信小程序样式 和 CSS 一样;</li><li>支持常用的 <code>:after,:before</code>, :<code>first-child</code> , <code>nth-child</code> 等常用伪劣选择器.</li></ul><blockquote><p>2、引入其他样式文件</p></blockquote><pre><code>使用 @import 导入外联样式表，@import 使用 外联样式表的相对路径在公共文件中创建demo.wxss文件后直接在所需要引入的wxss文件中引入 或者在app.wxss中引入@import &quot;demo.wxss“;</code></pre><blockquote><p>3、常用支持的选择器</p></blockquote><table><thead><tr><th>选择器</th><th style="text-align:center">demo</th></tr></thead><tbody><tr><td>类选择器</td><td style="text-align:center">.class</td></tr><tr><td>ID选择器</td><td style="text-align:center">#id</td></tr><tr><td>标签选择器</td><td style="text-align:center">view</td></tr><tr><td>后代选择器</td><td style="text-align:center">.class .child-class</td></tr><tr><td>:after</td><td style="text-align:center">view:after</td></tr><tr><td>:before</td><td style="text-align:center">view:before</td></tr><tr><td>:first-child</td><td style="text-align:center">view:first-child</td></tr><tr><td>:last-child</td><td style="text-align:center">view:last-child</td></tr><tr><td>:nth-child</td><td style="text-align:center">view:nth-child(even) view:nth-child(odd)</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;一、微信小程序-·-使用全局CSS&quot;&gt;&lt;a href=&quot;#一、微信小程序-·-使用全局CSS&quot; class=&quot;headerlink&quot; title=&quot;一、微信小程序 · 使用全局CSS&quot;&gt;&lt;/a&gt;一、微信小程序 · 使用全局CSS&lt;/h3&gt;&lt;blockquote&gt;
+
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="“WX”" scheme="http://gengaiwei.com/tags/%E2%80%9CWX%E2%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>git分支使用</title>
@@ -411,9 +488,9 @@
     <link href="http://gengaiwei.com/2018/02/02/nodejs1/"/>
     <id>http://gengaiwei.com/2018/02/02/nodejs1/</id>
     <published>2018-02-02T08:37:03.000Z</published>
-    <updated>2018-12-06T07:04:49.365Z</updated>
+    <updated>2020-07-08T06:40:20.506Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="一、Node-——-有啥优势"><a href="#一、Node-——-有啥优势" class="headerlink" title="一、Node —— 有啥优势"></a>一、Node —— 有啥优势</h3><p>1、性能高，根据大佬们测试，高于PHP86倍，就同样的设备同样的硬件运行node与PHP，node 用1s反馈，那PHP就要用一分半钟，是不是可以这样理解，如果PHP需要100台服务器，那node要一台就够了。。。</p><p>2、与前台js配合方便， 前台的编译代码、部署等等；</p><p>3、node 模块化 自定义模块，支持<code>es6</code>，框架有<code>express、koa</code>啊等；</p><p>4、更便于前端学习，人生苦短，Java PHP学不会。。。So,掌握好JavaScript本身，学起来node就变得简单多了，node做后台，JavaScript做前台，perfect。</p><h3 id="二、Node-——-怎么玩"><a href="#二、Node-——-怎么玩" class="headerlink" title="二、Node —— 怎么玩"></a>二、Node —— 怎么玩</h3><blockquote><p>1、安装，NA，<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>  Download LTS稳定版就行啦，步骤呢 step step；</p></blockquote><blockquote><p>2、open your 终端，write node 回车 如果没啥东西的话表示安装成功了 ，如果报错了，也别急，试试重启电脑。</p></blockquote><blockquote><p>3、now ，you can play it！<br>            （1）、首先呢你要记住 node.js他就像一个服务器，现在你是后端，你是后端，你是后端！现在你不需要建HTML啊css啊，就建个js行了啊，<br>            （2）、随便在哪个盘里 建个文件夹，但也不能瞎建，后面要用，栗如在F盘吧，你建个node命名的文件夹，然后打开编辑器，拖进来，建个<code>xxx.js</code>就叫1.js吧，里面写点儿啥啊，得让它跑起来是吧，就先在 1.js 里面写个最简单的，<code>console.log(&quot;我现在就要跑起来了，我要飞了&quot;)</code>，之前写个HTML在浏览器打开就能看见打印的东西，这咋看呢，不急。打开终端win+R 输cmd 打开终端，你得切盘 切到你建的那个文件夹所在的盘里，切哪个，哪个盘的后面加上冒号，<br>                 这里应该是<code>F：</code>回车 切到了F盘，再得切到你建的文件夹吧 快捷键<code>cd</code>你的文件夹名字 回车  然后 <code>node空格1.js</code> 现在就看见了吧<br>            （3）、如果你也讨厌每次都要在终端运行 每次都要打开这黑乎乎的东西，就在编辑器里打开，甭管你什么编辑器，问问亲爱的百度吧，这里 我用webstorm 他左下角有个<code>Terminal</code>打开它 运行步骤少了 不用你切盘不用你切换文件夹目录，直接node空格你的js文件名就可以，如果没错的话 就打印出来了吧，你想停掉的话 快捷键 <code>Ctrl+C</code> ；<br>            （4）、以上只是个醉醉醉简单的栗子，就给你说咋运行，接下来就说些真正有价值的东西；</p></blockquote><blockquote><p>4、node就是一个 <strong>服务器</strong>，一个有追求的服务器，那得有人访问啊，访问得通过浏览器访问吧，浏览器跟服务器之间连接需要HTTP协议吧，但HTTP很复杂的，上面说过了，node 模块化 有很多的模块 拿来用就可以了 ，现在就引用 <code>http</code>模块吧：<br>（1）、 引用方式：</p></blockquote><pre><code>const http=require(&apos;http&apos;);</code></pre><blockquote><p>（2）引用完之后，上面说了node就是一个 <strong>服务器</strong>，所以呀得创建个服务啊， 服务器不能过节不能休息吧，一台服务器永远都在运行，所以得有监视他，这里就叫监听<code>（listen）</code>，监听就好比小区看门的大爷，你说要去张三，大爷说了：“那个啥，张三就在三号楼三单元301，”，说白了 当有人访问的时候得有个人得在那等着，告诉你该去哪去哪，你要是找的人不在这个小区，那就走吧，找不到你要的人啊。所以啊，你找的谁，谁就是个端口啊，有这个端口，那你就进来，没这个端口，那对不起，localhost会拒绝你的请求；<br>   端口有好多（80开头的就代表web、还有邮件的110、数据库的3306啊等等），别重复就行，确保唯一性，这里的监听端口就以大众版的“8080”吧，如下</p></blockquote><pre><code>var server =http.createServer(function (req,res) {     //req 请求；res响应；     console.log(req.url);//打印一下看看node给你返回啥     res.write(&quot;你请求了 我得给你响应吧&quot;);//这是一个简单的往前台写东西，毕竟总不能你访问啥URL我都给你返回这句话吧；     res.end();//告诉服务器一声，结束请求});//端口---就是数字 ；监听---就是等着，等着人来server.listen(&quot;8080&quot;);//不是想看看给你打印的啥吗？先启动你的node node xxx.js 没错的话就打开浏览器输入---》localhost：8080  ！回车的同时看着你的node！</code></pre><p>  <table><tr><td bgcolor="orange">注:你试试在localhost：8080/xxx ,node 的后台就会打印出来你xxx的东西，你还会发现 还有一个/favicon.ico 都知道 就是那个图标，不用管就当Google多情了;</td></tr></table><br>  你也可以这样写：</p><pre><code>const http=require(&apos;http&apos;);http.createServer(function (req,res) {  console.log(req.url);     res.write(&quot;aaa&quot;);     res.end();}).listen(8080);</code></pre><p>   如图所示:<br>   <img src="1.png" alt=""><br><br>  </p><hr><p>到这里, 已经很啰嗦的  写了关于node 的安装配置以及一丁点的基本使用，希望对您有用</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="一、Node-——-有啥优势"><a href="#一、Node-——-有啥优势" class="headerlink" title="一、Node —— 有啥优势"></a>一、Node —— 有啥优势</h3><p>1、性能高，根据大佬们测试，高于PHP86倍，就同样的设备同样的硬件运行node与PHP，node 用1s反馈，那PHP就要用一分半钟，是不是可以这样理解，如果PHP需要100台服务器，那node要一台就够了。。。</p><p>2、与前台js配合方便， 前台的编译代码、部署等等；</p><p>3、node 模块化 自定义模块，支持<code>es6</code>，框架有<code>express、koa</code>啊等；</p><p>4、更便于前端学习，人生苦短，Java PHP学不会。。。So,掌握好JavaScript本身，学起来node就变得简单多了，node做后台，JavaScript做前台，perfect。</p><h3 id="二、Node-——-怎么玩"><a href="#二、Node-——-怎么玩" class="headerlink" title="二、Node —— 怎么玩"></a>二、Node —— 怎么玩</h3><blockquote><p>1、安装，NA，<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>  Download LTS稳定版就行啦，步骤呢 step step；</p></blockquote><blockquote><p>2、open your 终端，write node 回车 如果没啥东西的话表示安装成功了 ，如果报错了，也别急，试试重启电脑。</p></blockquote><blockquote><p>3、now ，you can play it！<br>            （1）、首先呢你要记住 node.js他就像一个服务器，现在你是后端，你是后端，你是后端！现在你不需要建HTML啊css啊，就建个js行了啊，<br>            （2）、随便在哪个盘里 建个文件夹，但也不能瞎建，后面要用，栗如在F盘吧，你建个node命名的文件夹，然后打开编辑器，拖进来，建个<code>xxx.js</code>就叫1.js吧，里面写点儿啥啊，得让它跑起来是吧，就先在 1.js 里面写个最简单的，<code>console.log(&quot;我现在就要跑起来了，我要飞了&quot;)</code>，之前写个HTML在浏览器打开就能看见打印的东西，这咋看呢，不急。打开终端win+R 输cmd 打开终端，你得切盘 切到你建的那个文件夹所在的盘里，切哪个，哪个盘的后面加上冒号，<br>                 这里应该是<code>F：</code>回车 切到了F盘，再得切到你建的文件夹吧 快捷键<code>cd</code>你的文件夹名字 回车  然后 <code>node空格1.js</code> 现在就看见了吧<br>            （3）、如果你也讨厌每次都要在终端运行 每次都要打开这黑乎乎的东西，就在编辑器里打开，甭管你什么编辑器，问问亲爱的百度吧，这里 我用webstorm 他左下角有个<code>Terminal</code>打开它 运行步骤少了 不用你切盘不用你切换文件夹目录，直接node空格你的js文件名就可以，如果没错的话 就打印出来了吧，你想停掉的话 快捷键 <code>Ctrl+C</code> ；<br>            （4）、以上只是个醉醉醉简单的栗子，就给你说咋运行，接下来就说些真正有价值的东西；</p></blockquote><blockquote><p>4、node就是一个 <strong>服务器</strong>，一个有追求的服务器，那得有人访问啊，访问得通过浏览器访问吧，浏览器跟服务器之间连接需要HTTP协议吧，但HTTP很复杂的，上面说过了，node 模块化 有很多的模块 拿来用就可以了 ，现在就引用 <code>http</code>模块吧：<br>（1）、 引用方式：</p></blockquote><pre><code>const http=require(&apos;http&apos;);</code></pre><blockquote><p>（2）引用完之后，上面说了node就是一个 <strong>服务器</strong>，所以呀得创建个服务啊， 服务器不能过节不能休息吧，一台服务器永远都在运行，所以得有监视他，这里就叫监听<code>（listen）</code>，监听就好比小区看门的大爷，你说要去张三，大爷说了：“那个啥，张三就在三号楼三单元301，”，说白了 当有人访问的时候得有个人得在那等着，告诉你该去哪去哪，你要是找的人不在这个小区，那就走吧，找不到你要的人啊。所以啊，你找的谁，谁就是个端口啊，有这个端口，那你就进来，没这个端口，那对不起，localhost会拒绝你的请求；<br>   端口有好多（80开头的就代表web、还有邮件的110、数据库的3306啊等等），别重复就行，确保唯一性，这里的监听端口就以大众版的“8080”吧，如下</p></blockquote><pre><code>var server =http.createServer(function (req,res) {     //req 请求；res响应；     console.log(req.url);//打印一下看看node给你返回啥     res.write(&quot;你请求了 我得给你响应吧&quot;);//这是一个简单的往前台写东西，毕竟总不能你访问啥URL我都给你返回这句话吧；     res.end();//告诉服务器一声，结束请求});//端口---就是数字 ；监听---就是等着，等着人来server.listen(&quot;8080&quot;);//不是想看看给你打印的啥吗？先启动你的node node xxx.js 没错的话就打开浏览器输入---》localhost：8080  ！回车的同时看着你的node！</code></pre><p>  <table><tr><td bgcolor="orange">注:你试试在localhost：8080/xxx ,node 的后台就会打印出来你xxx的东西，你还会发现 还有一个/favicon.ico 都知道 就是那个图标，不用管就当Google多情了;</td></tr></table><br>  你也可以这样写：</p><pre><code>const http=require(&apos;http&apos;);http.createServer(function (req,res) {  console.log(req.url);     res.write(&quot;aaa&quot;);     res.end();}).listen(8080);</code></pre><p>   如图所示:<br>   <img src="1.png" alt=""><br><br>  </p><hr><p>到这里, 已经很啰嗦的  写了关于node 的安装配置以及一丁点的基本使用，希望对您有用 - _ -</p>]]></content>
     
     <summary type="html">
     
@@ -428,57 +505,6 @@
     
     
       <category term="Node" scheme="http://gengaiwei.com/tags/Node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>React</title>
-    <link href="http://gengaiwei.com/2018/01/31/React/"/>
-    <id>http://gengaiwei.com/2018/01/31/React/</id>
-    <published>2018-01-31T01:53:44.000Z</published>
-    <updated>2018-10-11T07:20:32.300Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World"></a>Hello World</h1><p>创建新应用吧，嗯<br>Create React App 是开始构建新的 React 单页面应用的最佳途径。 它可以帮你配置开发环境，以便你可以使用最新的 JavaScript 特性，还能提供很棒的开发体验，并为生产环境优化你的应用。</p><p>npm install -g create-react-app<br>create-react-app my-app</p><p>cd my-app<br>npm start</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;Hello-World&quot;&gt;&lt;a href=&quot;#Hello-World&quot; class=&quot;headerlink&quot; title=&quot;Hello World&quot;&gt;&lt;/a&gt;Hello World&lt;/h1&gt;&lt;p&gt;创建新应用吧，嗯&lt;br&gt;Create React App 是开始构建
-      
-    
-    </summary>
-    
-      <category term="框架" scheme="http://gengaiwei.com/categories/%E6%A1%86%E6%9E%B6/"/>
-    
-    
-      <category term="web前端" scheme="http://gengaiwei.com/tags/web%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git 之 项目管理基本命令</title>
-    <link href="http://gengaiwei.com/2018/01/02/Git/"/>
-    <id>http://gengaiwei.com/2018/01/02/Git/</id>
-    <published>2018-01-02T08:47:06.000Z</published>
-    <updated>2018-12-06T07:05:13.525Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Git-安装"><a href="#Git-安装" class="headerlink" title="Git 安装"></a>Git 安装</h3><blockquote><p>1、首先，下载安装<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">git</a></p></blockquote><blockquote><p>2、下载之后打开，双击<code>.pkg</code>安装;</p></blockquote><blockquote><p>3、 打开终端，使用<code>git --version</code>命令查看安装版本，有就是安装成功了</p></blockquote><blockquote><p>4、创建一个用户名：<code>git config --global user.name &quot;NAME&quot;</code> ，这里的NAME可以随便取</p></blockquote><blockquote><p>5、创建一个邮箱：<code>git config --global user.email &quot;MY_NAME@example.com&quot;</code>，这里的邮箱应该跟 GitBlit（目前公司用这个，自己也用GitHub） 服务器上注册的邮箱一致<br>然后，使用git命令上传本地文件至git服务器:</p></blockquote><pre><code>(1)在终端进入你想要创建git的目录下，先初始化：`git init`(2)连接远程服务器：`git remote add origin ssh://xxxxx@10.2.10.208:29418/qinghua.git`(这里写版本库地址)(3)在将本地文件上传至git服务器之前，先上传一个测试文件，相当于激活一下服务器上的git库(4)新建一个文件：`touch README.md`，这里的文件名可以随意取，创建完了之后可以用`git status`查看一下(5)将文件上传到本地git库：`git add filename`(6)上传之前，给本次上传取一个名字：`git commit －m  &apos;test&apos; `，这里的名字test可以随意取(7)将本地git库的文件上传到git服务器库里：`git push －u origin master`</code></pre><h3 id="Git-上传项目命令"><a href="#Git-上传项目命令" class="headerlink" title="Git 上传项目命令"></a>Git 上传项目命令</h3><p>1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库</p><pre><code>git init</code></pre><p>2、把文件添加到版本库中，使用命令git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件</p><pre><code>git add .</code></pre><p>3、用命令git commit告诉Git，把文件提交到仓库。引号内为提交说明</p><pre><code>git commit -m &apos;first commit&apos;</code></pre><p>4、关联到远程库</p><pre><code>git remote add origin 你的远程库地址如：git remote add origin https://github.com/cade8800/ionic-demo.git</code></pre><p>5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）</p><pre><code>git pull --rebase origin master</code></pre><p>6、把本地库的内容推送到远程，使用 <code>git push</code>命令，实际上是把当前分支<code>master</code>推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。</p><pre><code>git push -u origin master</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Git-安装&quot;&gt;&lt;a href=&quot;#Git-安装&quot; class=&quot;headerlink&quot; title=&quot;Git 安装&quot;&gt;&lt;/a&gt;Git 安装&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;1、首先，下载安装&lt;a href=&quot;http://git-scm.com/down
-      
-    
-    </summary>
-    
-      <category term="Git" scheme="http://gengaiwei.com/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="http://gengaiwei.com/tags/Git/"/>
     
   </entry>
   
