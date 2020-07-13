@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://gengaiwei.com/2020/07/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%BD%BF%E7%94%A8vscode%E7%BC%96%E8%BE%91%E5%99%A8%E5%BC%80%E5%8F%91/</loc>
+    
+    <lastmod>2020-07-13T11:06:11.623Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2020/05/04/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%85%A8%E5%B1%80CSS/</loc>
     
     <lastmod>2020-07-08T08:07:08.370Z</lastmod>
@@ -128,14 +135,14 @@
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
+    <loc>http://gengaiwei.com/2018/02/06/nodejs4/</loc>
     
     <lastmod>2018-10-11T07:20:30.803Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://gengaiwei.com/2018/02/06/nodejs4/</loc>
+    <loc>http://gengaiwei.com/2018/02/03/nvm1/</loc>
     
     <lastmod>2018-10-11T07:20:30.803Z</lastmod>
     
@@ -156,6 +163,13 @@
   </url>
   
   <url>
+    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
+    
+    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://gengaiwei.com/2018/02/08/node-debugging/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
@@ -164,13 +178,6 @@
   
   <url>
     <loc>http://gengaiwei.com/2018/10/11/hello-world/</loc>
-    
-    <lastmod>2018-10-11T07:20:30.797Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://gengaiwei.com/2018/02/07/node-process/</loc>
     
     <lastmod>2018-10-11T07:20:30.797Z</lastmod>
     

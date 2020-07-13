@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gengaiwei.com/"/>
-  <updated>2020-07-08T07:22:40.547Z</updated>
+  <updated>2020-07-13T11:06:11.623Z</updated>
   <id>http://gengaiwei.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>微信小程序 之 使用vscode编辑器开发</title>
+    <link href="http://gengaiwei.com/2020/07/13/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F-%E4%BD%BF%E7%94%A8vscode%E7%BC%96%E8%BE%91%E5%99%A8%E5%BC%80%E5%8F%91/"/>
+    <id>http://gengaiwei.com/2020/07/13/微信小程序-使用vscode编辑器开发/</id>
+    <published>2020-07-13T10:52:50.000Z</published>
+    <updated>2020-07-13T11:06:11.623Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="使用vscode编辑器开发微信小程序"><a href="#使用vscode编辑器开发微信小程序" class="headerlink" title="使用vscode编辑器开发微信小程序"></a>使用vscode编辑器开发微信小程序</h3><blockquote><p>推荐安装插件</p></blockquote><table><thead><tr><th style="text-align:center">插件名</th><th style="text-align:left">主要功能</th></tr></thead><tbody><tr><td style="text-align:center">minapp</td><td style="text-align:left">wxml格式化、标签与属性自动补全及各种智能补全、内置snippets、js高亮等等</td></tr><tr><td style="text-align:center">wechat-snippets</td><td style="text-align:left">Wxml、js、json代码片段模版进行代码辅助，代码片段自动完成，可以作为minapp插件的补充。</td></tr><tr><td style="text-align:center">vscode-wechat</td><td style="text-align:left">微信应用支持vscode</td></tr><tr><td style="text-align:center">Vscode wxml</td><td style="text-align:left">提供wxml语法支持及代码片段</td></tr></tbody></table>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;使用vscode编辑器开发微信小程序&quot;&gt;&lt;a href=&quot;#使用vscode编辑器开发微信小程序&quot; class=&quot;headerlink&quot; title=&quot;使用vscode编辑器开发微信小程序&quot;&gt;&lt;/a&gt;使用vscode编辑器开发微信小程序&lt;/h3&gt;&lt;blockquo
+      
+    
+    </summary>
+    
+      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+      <category term="“WX”" scheme="http://gengaiwei.com/tags/%E2%80%9CWX%E2%80%9D/"/>
+    
+  </entry>
   
   <entry>
     <title>TypeScript（一）：认知与基础类型</title>
@@ -477,31 +502,6 @@
     </summary>
     
       <category term="Node.js 、NVM" scheme="http://gengaiwei.com/categories/Node-js-%E3%80%81NVM/"/>
-    
-    
-      <category term="Node" scheme="http://gengaiwei.com/tags/Node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js 之 优势及安装配置--初学者^o^</title>
-    <link href="http://gengaiwei.com/2018/02/02/nodejs1/"/>
-    <id>http://gengaiwei.com/2018/02/02/nodejs1/</id>
-    <published>2018-02-02T08:37:03.000Z</published>
-    <updated>2020-07-08T06:40:20.506Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="一、Node-——-有啥优势"><a href="#一、Node-——-有啥优势" class="headerlink" title="一、Node —— 有啥优势"></a>一、Node —— 有啥优势</h3><p>1、性能高，根据大佬们测试，高于PHP86倍，就同样的设备同样的硬件运行node与PHP，node 用1s反馈，那PHP就要用一分半钟，是不是可以这样理解，如果PHP需要100台服务器，那node要一台就够了。。。</p><p>2、与前台js配合方便， 前台的编译代码、部署等等；</p><p>3、node 模块化 自定义模块，支持<code>es6</code>，框架有<code>express、koa</code>啊等；</p><p>4、更便于前端学习，人生苦短，Java PHP学不会。。。So,掌握好JavaScript本身，学起来node就变得简单多了，node做后台，JavaScript做前台，perfect。</p><h3 id="二、Node-——-怎么玩"><a href="#二、Node-——-怎么玩" class="headerlink" title="二、Node —— 怎么玩"></a>二、Node —— 怎么玩</h3><blockquote><p>1、安装，NA，<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>  Download LTS稳定版就行啦，步骤呢 step step；</p></blockquote><blockquote><p>2、open your 终端，write node 回车 如果没啥东西的话表示安装成功了 ，如果报错了，也别急，试试重启电脑。</p></blockquote><blockquote><p>3、now ，you can play it！<br>            （1）、首先呢你要记住 node.js他就像一个服务器，现在你是后端，你是后端，你是后端！现在你不需要建HTML啊css啊，就建个js行了啊，<br>            （2）、随便在哪个盘里 建个文件夹，但也不能瞎建，后面要用，栗如在F盘吧，你建个node命名的文件夹，然后打开编辑器，拖进来，建个<code>xxx.js</code>就叫1.js吧，里面写点儿啥啊，得让它跑起来是吧，就先在 1.js 里面写个最简单的，<code>console.log(&quot;我现在就要跑起来了，我要飞了&quot;)</code>，之前写个HTML在浏览器打开就能看见打印的东西，这咋看呢，不急。打开终端win+R 输cmd 打开终端，你得切盘 切到你建的那个文件夹所在的盘里，切哪个，哪个盘的后面加上冒号，<br>                 这里应该是<code>F：</code>回车 切到了F盘，再得切到你建的文件夹吧 快捷键<code>cd</code>你的文件夹名字 回车  然后 <code>node空格1.js</code> 现在就看见了吧<br>            （3）、如果你也讨厌每次都要在终端运行 每次都要打开这黑乎乎的东西，就在编辑器里打开，甭管你什么编辑器，问问亲爱的百度吧，这里 我用webstorm 他左下角有个<code>Terminal</code>打开它 运行步骤少了 不用你切盘不用你切换文件夹目录，直接node空格你的js文件名就可以，如果没错的话 就打印出来了吧，你想停掉的话 快捷键 <code>Ctrl+C</code> ；<br>            （4）、以上只是个醉醉醉简单的栗子，就给你说咋运行，接下来就说些真正有价值的东西；</p></blockquote><blockquote><p>4、node就是一个 <strong>服务器</strong>，一个有追求的服务器，那得有人访问啊，访问得通过浏览器访问吧，浏览器跟服务器之间连接需要HTTP协议吧，但HTTP很复杂的，上面说过了，node 模块化 有很多的模块 拿来用就可以了 ，现在就引用 <code>http</code>模块吧：<br>（1）、 引用方式：</p></blockquote><pre><code>const http=require(&apos;http&apos;);</code></pre><blockquote><p>（2）引用完之后，上面说了node就是一个 <strong>服务器</strong>，所以呀得创建个服务啊， 服务器不能过节不能休息吧，一台服务器永远都在运行，所以得有监视他，这里就叫监听<code>（listen）</code>，监听就好比小区看门的大爷，你说要去张三，大爷说了：“那个啥，张三就在三号楼三单元301，”，说白了 当有人访问的时候得有个人得在那等着，告诉你该去哪去哪，你要是找的人不在这个小区，那就走吧，找不到你要的人啊。所以啊，你找的谁，谁就是个端口啊，有这个端口，那你就进来，没这个端口，那对不起，localhost会拒绝你的请求；<br>   端口有好多（80开头的就代表web、还有邮件的110、数据库的3306啊等等），别重复就行，确保唯一性，这里的监听端口就以大众版的“8080”吧，如下</p></blockquote><pre><code>var server =http.createServer(function (req,res) {     //req 请求；res响应；     console.log(req.url);//打印一下看看node给你返回啥     res.write(&quot;你请求了 我得给你响应吧&quot;);//这是一个简单的往前台写东西，毕竟总不能你访问啥URL我都给你返回这句话吧；     res.end();//告诉服务器一声，结束请求});//端口---就是数字 ；监听---就是等着，等着人来server.listen(&quot;8080&quot;);//不是想看看给你打印的啥吗？先启动你的node node xxx.js 没错的话就打开浏览器输入---》localhost：8080  ！回车的同时看着你的node！</code></pre><p>  <table><tr><td bgcolor="orange">注:你试试在localhost：8080/xxx ,node 的后台就会打印出来你xxx的东西，你还会发现 还有一个/favicon.ico 都知道 就是那个图标，不用管就当Google多情了;</td></tr></table><br>  你也可以这样写：</p><pre><code>const http=require(&apos;http&apos;);http.createServer(function (req,res) {  console.log(req.url);     res.write(&quot;aaa&quot;);     res.end();}).listen(8080);</code></pre><p>   如图所示:<br>   <img src="1.png" alt=""><br><br>  </p><hr><p>到这里, 已经很啰嗦的  写了关于node 的安装配置以及一丁点的基本使用，希望对您有用 - _ -</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;一、Node-——-有啥优势&quot;&gt;&lt;a href=&quot;#一、Node-——-有啥优势&quot; class=&quot;headerlink&quot; title=&quot;一、Node —— 有啥优势&quot;&gt;&lt;/a&gt;一、Node —— 有啥优势&lt;/h3&gt;&lt;p&gt;1、性能高，根据大佬们测试，高于PHP86倍
-      
-    
-    </summary>
-    
-      <category term="Node.js" scheme="http://gengaiwei.com/categories/Node-js/"/>
     
     
       <category term="Node" scheme="http://gengaiwei.com/tags/Node/"/>
