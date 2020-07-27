@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="JavaScript、 Node.Js、 Vue、 微信小程序、 React...">
-    <meta name="keywords" content=",WX">
+    <meta name="keywords" content=",微信小程序">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -235,11 +235,11 @@
     <meta property="og:title" content="微信小程序 分类 提交后台返回的分类ID | Ellen">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="JavaScript、 Node.Js、 Vue、 微信小程序、 React...">
-    <meta property="og:article:tag" content="WX"> 
+    <meta property="og:article:tag" content="微信小程序"> 
 
     
         <meta property="article:published_time" content="Sat Mar 10 2018 14:40:49 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jul 20 2020 10:45:29 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jul 27 2020 14:01:48 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://gengaiwei.com/2018/03/10/wxPicker/index.html",
     "headline": "微信小程序 分类 提交后台返回的分类ID",
     "datePublished": "Sat Mar 10 2018 14:40:49 GMT+0800",
-    "dateModified": "Mon Jul 20 2020 10:45:29 GMT+0800",
+    "dateModified": "Mon Jul 27 2020 14:01:48 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Ellen",
@@ -280,7 +280,7 @@
             "url": "/img/favicon.png"
         }
     },
-    "keywords": ",WX",
+    "keywords": ",微信小程序",
     "description": "JavaScript、 Node.Js、 Vue、 微信小程序、 React...",
 }
 </script>
@@ -346,7 +346,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#底部弹出分类选项，选中之后，得到后台返回的ID，这里是GitHub"><span class="post-toc-number">1.</span> <span class="post-toc-text">底部弹出分类选项，选中之后，得到后台返回的ID，这里是GitHub</span></a></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Form表单中-分类选项，选中之后，得到后台返回的ID，这里是GitHub"><span class="post-toc-number">1.</span> <span class="post-toc-text">Form表单中 分类选项，选中之后，得到后台返回的ID，这里是GitHub</span></a></li></ol>
     </ul>
     
 
@@ -421,7 +421,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/WX/">WX</a>
+        <a class="post_tag-link" href="/tags/微信小程序/">微信小程序</a>
     </ul>
     
 
@@ -496,126 +496,31 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="底部弹出分类选项，选中之后，得到后台返回的ID，这里是GitHub"><a href="#底部弹出分类选项，选中之后，得到后台返回的ID，这里是GitHub" class="headerlink" title="底部弹出分类选项，选中之后，得到后台返回的ID，这里是GitHub"></a>底部弹出分类选项，选中之后，得到后台返回的ID，这里是<a href="https://github.com/DavidGAW/wx-picker" target="_blank" rel="noopener">GitHub</a></h3><blockquote>
+        <h3 id="Form表单中-分类选项，选中之后，得到后台返回的ID，这里是GitHub"><a href="#Form表单中-分类选项，选中之后，得到后台返回的ID，这里是GitHub" class="headerlink" title="Form表单中 分类选项，选中之后，得到后台返回的ID，这里是GitHub"></a>Form表单中 分类选项，选中之后，得到后台返回的ID，这里是<a href="https://github.com/DavidGAW/wx-picker" target="_blank" rel="noopener">GitHub</a></h3><blockquote>
 <p>1.wxml</p>
 </blockquote>
-<pre><code>&lt;picker  bindchange=&quot;bindCategory&quot;  name=&quot;category_id&quot; value=&quot;{{category_index}}&quot; range=&quot;{{category}}&quot; &gt;
-    &lt;view class=&quot;picker&quot; &gt;
-        &lt;text style=&apos;color:#888;padding-right:5%;&apos;&gt;分类&lt;/text&gt;{{category[category_index]}}
-    &lt;/view&gt;
-    &lt;image class=&apos;dowm-btn&apos; src=&apos;一个向下箭头的图片&apos;&gt;&lt;/image&gt;
-&lt;/picker&gt;
-</code></pre><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;picker bindchange=&quot;bindCategory&quot;  </span><br><span class="line">        name=&quot;category_id&quot;</span><br><span class="line">        value=&quot;&#123;&#123;category_index&#125;&#125;&quot;</span><br><span class="line">        range=&quot;&#123;&#123;category&#125;&#125;&quot; &gt;</span><br><span class="line">    &lt;view class=&quot;picker&quot; &gt;</span><br><span class="line">        &lt;text style=&apos;color:#888;padding-right:5%;&apos;&gt;分类&lt;/text&gt;</span><br><span class="line">        &#123;&#123;category[category_index]&#125;&#125;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">    &lt;image class=&apos;dowm-btn&apos; src=&apos;一个向下箭头的图片&apos;&gt;&lt;/image&gt;</span><br><span class="line">&lt;/picker&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>2.wxss</p>
 </blockquote>
-<pre><code>.fl{
-background: #fff;
-height: 45px;
-line-height: 45px;
-padding-left: 5%;
-font-size: 0.8rem;
-}
-.picker{
-width: 85%;
-display: inline-block;
-}
-.dowm-btn{
-width: 1rem;
-height: 1rem;
-vertical-align: middle;
-}
-</code></pre><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">.fl&#123;</span><br><span class="line">    background: #fff;</span><br><span class="line">    height: 45px;</span><br><span class="line">    line-height: 45px;</span><br><span class="line">    padding-left: 5%;</span><br><span class="line">    font-size: 0.8rem;</span><br><span class="line">&#125;</span><br><span class="line">.picker&#123;</span><br><span class="line">    width: 85%;</span><br><span class="line">    display: inline-block;</span><br><span class="line">&#125;</span><br><span class="line">.dowm-btn&#123;</span><br><span class="line">    width: 1rem;</span><br><span class="line">    height: 1rem;</span><br><span class="line">    vertical-align: middle;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>3.js 这里只是得到了选中的本身自带的ID，可能并不是后台给你的ID</p>
 </blockquote>
-<pre><code>bindCategory: function (e) {
-    var that =this
-    that.setData({
-    category_index: e.detail.value
-    })
-},
-</code></pre><blockquote>
-<p>4.一般的选择分类，一般都是包含在一个大的表单里，要提交到后台提供的接口里，So ,wxml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">bindCategory: function (e) &#123;</span><br><span class="line">    var that =this</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">    category_index: e.detail.value</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>4.一般的选择分类，一般都是包含在一个大的表单里，要提交到后台提供的接口里</p>
 </blockquote>
-<pre><code>&lt;form bindsubmit=&apos;submitForm&apos;&gt;
-//这里包含各种表单，for example：input ,checkbox ,radio etc.
-
-&lt;picker  bindchange=&quot;bindCategory&quot;  name=&quot;category_id&quot; value=&quot;{{category_index}}&quot; range=&quot;{{category}}&quot; &gt;
-    &lt;view class=&quot;picker&quot; &gt;
-        &lt;text style=&apos;color:#888;padding-right:5%;&apos;&gt;分类&lt;/text&gt;{{category[category_index]}}
-    &lt;/view&gt;
-    &lt;image class=&apos;dowm-btn&apos; src=&apos;一个向下箭头的图片&apos;&gt;&lt;/image&gt;
-&lt;/picker&gt;
-
-&lt;view class=&apos;submitForm&apos;&gt;
-    &lt;button class=&apos;submitbtn&apos; form-type=&apos;submit&apos; &gt;发布&lt;/button&gt;
-&lt;/view&gt;
-&lt;/form&gt;
-</code></pre><blockquote>
-<p>5.选取分类，得到的ID是当前标签本身的index，并不是后台返回的ID，So,在分类的接口回调中，把分类的name与ID分别存下来，然后，在提交表单的时候，把当前分类自带的ID替换为后台提供的ID</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;form bindsubmit=&apos;submitForm&apos;&gt;</span><br><span class="line">    //这里包含各种表单，for example：input ,checkbox ,radio etc.</span><br><span class="line"></span><br><span class="line">    &lt;picker bindchange=&quot;bindCategory&quot;  </span><br><span class="line">            name=&quot;category_id&quot;</span><br><span class="line">            value=&quot;&#123;&#123;category_index&#125;&#125;&quot;</span><br><span class="line">            range=&quot;&#123;&#123;category&#125;&#125;&quot; &gt;</span><br><span class="line">        &lt;view class=&quot;picker&quot; &gt;</span><br><span class="line">            &lt;text style=&apos;color:#888;padding-right:5%;&apos;&gt;分类&lt;/text&gt;</span><br><span class="line">            &#123;&#123;category[category_index]&#125;&#125;</span><br><span class="line">        &lt;/view&gt;</span><br><span class="line">        &lt;image class=&apos;dowm-btn&apos; src=&apos;一个向下箭头的图片&apos;&gt;&lt;/image&gt;</span><br><span class="line">    &lt;/picker&gt;</span><br><span class="line"></span><br><span class="line">    &lt;view class=&apos;submitForm&apos;&gt;</span><br><span class="line">        &lt;button class=&apos;submitbtn&apos; form-type=&apos;submit&apos; &gt;发布&lt;/button&gt;</span><br><span class="line">    &lt;/view&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>5.选取分类，得到的ID是当前标签本身的index，并不是后台返回的ID 在分类的接口回调中，把分类的name与ID分别存下来，然后，在提交表单的时候，把当前分类自带的ID替换为后台提供的ID</p>
 </blockquote>
-<pre><code>//分类接口
-wx.request({
-url: ‘分类接口&apos;,
-method: &apos;GET&apos;,
-header: {
-    &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
-    Token: wx.getStorageSync(&apos;openid&apos;),//
-    Accept: &apos;application/vnd.epet.v1+json&apos;,
-},
-success: function (res) {
-    let category = res.data.data
-    var id_arr=[];
-    var name_arr = [];
-
-    for (var i = 0; i &lt; category.length; i++) {
-    id_arr[i] = category[i].id
-    name_arr[i] = category[i].name;
-    }
-    that.setData({
-    category: name_arr,
-    category_idlist: id_arr
-    });
-},
-fail: function (res) {
-    wx.hideLoading();
-
-    wx.showToast({
-    title: &apos;加载失败&apos;,
-    icon: &apos;err&apos;,
-    duration: 2000
-    });
-}
-});
-</code></pre><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">wx.request(&#123;</span><br><span class="line">    url: ‘分类接口&apos;,</span><br><span class="line">    method: &apos;GET&apos;,</span><br><span class="line">    header: &#123;</span><br><span class="line">        &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">        Token: wx.getStorageSync(&apos;openid&apos;),</span><br><span class="line">    &#125;,</span><br><span class="line">    success: function (res) &#123;</span><br><span class="line">        let category = res.data.data</span><br><span class="line">        let id_arr=[];</span><br><span class="line">        let name_arr = [];</span><br><span class="line"></span><br><span class="line">        for (var i = 0; i &lt; category.length; i++) &#123;</span><br><span class="line">        id_arr[i] = category[i].id</span><br><span class="line">        name_arr[i] = category[i].name;</span><br><span class="line">        &#125;</span><br><span class="line">        that.setData(&#123;</span><br><span class="line">        category: name_arr,</span><br><span class="line">        category_idlist: id_arr</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">    fail: function (res) &#123;</span><br><span class="line">        wx.hideLoading();</span><br><span class="line">        wx.showToast(&#123;</span><br><span class="line">            title: &apos;加载失败&apos;,</span><br><span class="line">            icon: &apos;err&apos;,</span><br><span class="line">            duration: 2000</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>6.在提交表单时，更换为后台提供的分类对应的ID</p>
 </blockquote>
-<pre><code>// 上传所有数据===========
-submitForm: function (e) {
-    var that = this
-
-    e.detail.value.category_id = that.data.category_idlist[e.detail.value.category_id]
-    console.log(e.detail.value.category_id)
-
-    wx.request({
-    url: ‘提交表单的接口&apos;,
-    method: &apos;POST&apos;,
-    data: {       
-        category_id: e.detail.value.category_id,
-    },
-    header: {
-        &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,
-        Token: wx.getStorageSync(&apos;openid&apos;),
-        Accept: &apos;application/vnd.epet.v1+json&apos;,
-    },
-    success: function (res) {
-        console.log(res)
-    },
-    fail: function (res) {
-
-    }
-    });
-},
-</code></pre><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">submitForm: function (e) &#123;</span><br><span class="line">    let that = this;</span><br><span class="line"></span><br><span class="line">    e.detail.value.category_id = that.data.category_idlist[e.detail.value.category_id];</span><br><span class="line"></span><br><span class="line">    wx.request(&#123;</span><br><span class="line">        url: ‘提交表单的接口&apos;,</span><br><span class="line">        method: &apos;POST&apos;,</span><br><span class="line">        data: &#123;</span><br><span class="line">            category_id: e.detail.value.category_id,</span><br><span class="line">        &#125;,</span><br><span class="line">        header: &#123;</span><br><span class="line">            &quot;Content-Type&quot;: &quot;application/x-www-form-urlencoded&quot;,</span><br><span class="line">            Token: wx.getStorageSync(&apos;openid&apos;),</span><br><span class="line">        &#125;,</span><br><span class="line">        success: function (res) &#123;</span><br><span class="line">            console.log(res)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: function (res) &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<blockquote>
 <p>如果对你有用，谢谢 Star一下<a href="https://github.com/DavidGAW/wx-picker" target="_blank" rel="noopener">GitHub</a></p>
 </blockquote>
 
@@ -852,7 +757,7 @@ submitForm: function (e) {
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2020/07/">July 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">June 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">February 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">April 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2020/07/">July 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">June 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">February 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">April 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -870,7 +775,7 @@ submitForm: function (e) {
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js/">Node.js<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js-、NVM/">Node.js 、NVM<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/TypeScript/">TypeScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Vue/">Vue<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/微信小程序/">微信小程序<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/框架/">框架<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js/">Node.js<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/TypeScript/">TypeScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Vue/">Vue<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/微信小程序/">微信小程序<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/框架/">框架<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         

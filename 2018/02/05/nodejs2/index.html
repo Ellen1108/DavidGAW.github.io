@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Mon Feb 05 2018 09:27:33 GMT+0800">
-        <meta property="article:modified_time" content="Thu Oct 11 2018 15:20:30 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jul 27 2020 15:02:44 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://gengaiwei.com/2018/02/05/nodejs2/index.html",
     "headline": "Node.js 之 数据请求",
     "datePublished": "Mon Feb 05 2018 09:27:33 GMT+0800",
-    "dateModified": "Thu Oct 11 2018 15:20:30 GMT+0800",
+    "dateModified": "Mon Jul 27 2020 15:02:44 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "Ellen",
@@ -496,7 +496,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h3 id="一、Node-js-——-作为一个有追求的服务器"><a href="#一、Node-js-——-作为一个有追求的服务器" class="headerlink" title="一、Node.js —— 作为一个有追求的服务器"></a>一、Node.js —— 作为一个有追求的服务器</h3><p> 在[ <a href="/2018/02/02/nodejs1/" title="Node.js 之 优势及配置">Node.js 之 优势及配置</a> ]中说过，就把node当做一个服务器，一个服务器该有的职能就应要有请求数据、读取文件、创建服务呀。NA，现在该整整数据的事了吧，通常情况下，浏览器跟服务器之间甭管你是请求还是响应，其实都是信息啊，信息里面都有一个header跟content，头小身子大，header里面就放的URL啊还有一些头信息，content里面一般就放post数据主体数据了，前台请求后台的数据方式有很多种，至少有三种常用的Form、Ajax、Jsonp,但对于后台来说，对于Node来说，处理的方式都一样，都是接到的http请求，走HTTP协议的，只不过是前台请求的方式不同，常见的GET啊、POST啊，DELETE啥啥的不常用也就不扯了，主要扯一扯GET、POST。</p>
+        <h3 id="一、Node-js-——-作为一个有追求的服务器"><a href="#一、Node-js-——-作为一个有追求的服务器" class="headerlink" title="一、Node.js —— 作为一个有追求的服务器"></a>一、Node.js —— 作为一个有追求的服务器</h3><p>在 <a href="/source/_posts/nodejs1.md">Node.js 之 优势及配置</a>中说过，就把node当做一个服务器，一个服务器该有的职能就应要有请求数据、读取文件、创建服务呀。NA，现在该整整数据的事了吧，通常情况下，浏览器跟服务器之间甭管你是请求还是响应，其实都是信息啊，信息里面都有一个header跟content，头小身子大，header里面就放的URL啊还有一些头信息，content里面一般就放post数据主体数据了，前台请求后台的数据方式有很多种，至少有三种常用的Form、Ajax、Jsonp,但对于后台来说，对于Node来说，处理的方式都一样，都是接到的http请求，走HTTP协议的，只不过是前台请求的方式不同，常见的GET啊、POST啊，DELETE啥啥的不常用也就不扯了，主要扯一扯GET、POST。</p>
 <h4 id="1、请求方式-——-GET（数据在URL中）"><a href="#1、请求方式-——-GET（数据在URL中）" class="headerlink" title="1、请求方式 —— GET（数据在URL中）"></a>1、请求方式 —— GET（数据在URL中）</h4><p>就以form表单为例吧，在文件夹里建个<code>form.html</code>还有<code>server.js</code>:<br>(1).form.html    action就以你写的那个端口，与server.js里面的端口号要一样，method方法这里就为get</p>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot;&gt;
@@ -512,7 +512,7 @@
     &lt;/form&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><p>(2).server.js   别忘记启动它   <code>node server.js</code> [ <a href="/2018/02/02/nodejs1/" title="Node.js 之 优势及配置">Node.js 之 优势及配置</a> ]里有详细说明    </p>
+</code></pre><p>(2).server.js   别忘记启动它   <code>node server.js</code> [ <a href="/2018/02/02/nodejs1/" title="Node.js 之 优势及配置">Node.js 之 优势及配置</a> ]里有详细说明  </p>
 <pre><code>const http=require(&apos;http&apos;);
 http.createServer(function (req,res) {
     console.log(req.url);
@@ -595,7 +595,7 @@ http.createServer(function (req,res) {
         // console.log(post_con);
     });
 }).listen(8080);
-</code></pre><p><strong><em>总结：</em></strong> 这里解析post、get数据用的是node提供的模块<code>querystring</code>、<code>url</code>，还有[ <a href="/2018/02/04/nodejs3/" title="Node.js 之 文件读取">Node.js 之 文件读取</a> ]， 到目前阶段, node接受请求、读取文件、包括server本身已整理，那么终于可以进行下一步完整的搭建了，抽时间，整一下。</p>
+</code></pre><p><strong><em>总结：</em></strong> 这里解析post、get数据用的是node提供的模块<code>querystring</code>、<code>url</code>，还有<a href="/source/_posts/nodejs3.md">Node.js 之 文件读取</a>， 到目前阶段, node接受请求、读取文件、包括server本身已整理，那么终于可以进行下一步完整的搭建了，抽时间，整一下。</p>
 
         
     
@@ -830,7 +830,7 @@ http.createServer(function (req,res) {
             </a>
             <ul class="dropdown-menu">
             <li>
-                <a class="sidebar_archives-link" href="/archives/2020/07/">July 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">June 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">February 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">April 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">2</span></a>
+                <a class="sidebar_archives-link" href="/archives/2020/07/">July 2020<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/06/">June 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/05/">May 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/03/">March 2020<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2020/02/">February 2020<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2019/04/">April 2019<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/10/">October 2018<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/03/">March 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/02/">February 2018<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2018/01/">January 2018<span class="sidebar_archives-count">2</span></a>
             </ul>
         </li>
         
@@ -848,7 +848,7 @@ http.createServer(function (req,res) {
             </a>
             <ul class="dropdown-menu">
                 <li>
-                <a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js/">Node.js<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js-、NVM/">Node.js 、NVM<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/TypeScript/">TypeScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Vue/">Vue<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/微信小程序/">微信小程序<span class="sidebar_archives-count">15</span></a></li><li><a class="sidebar_archives-link" href="/categories/框架/">框架<span class="sidebar_archives-count">1</span></a>
+                <a class="sidebar_archives-link" href="/categories/Git/">Git<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScript/">JavaScript<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Node-js/">Node.js<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/TypeScript/">TypeScript<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Vue/">Vue<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/微信小程序/">微信小程序<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/性能优化/">性能优化<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/框架/">框架<span class="sidebar_archives-count">1</span></a>
             </ul>
         </li>
         
