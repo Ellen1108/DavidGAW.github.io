@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://gengaiwei.com/"/>
-  <updated>2020-10-16T09:37:21.863Z</updated>
+  <updated>2021-02-25T02:20:36.580Z</updated>
   <id>http://gengaiwei.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>project tree</title>
+    <link href="http://gengaiwei.com/2021/02/25/project-tree/"/>
+    <id>http://gengaiwei.com/2021/02/25/project-tree/</id>
+    <published>2021-02-25T02:14:19.000Z</published>
+    <updated>2021-02-25T02:20:36.580Z</updated>
+    
+    <content type="html"><![CDATA[<p>markdown 自动生成项目目录结构</p><h4 id="安装插件-tree"><a href="#安装插件-tree" class="headerlink" title="安装插件 tree"></a>安装插件 tree</h4><pre><code>npm i tree-node-cli -g //全局安装</code></pre><p>然后输入</p><pre><code>tree --help</code></pre><p>-L 是确定要几级目录，-I是排除哪个文件夹下的</p><p>先cd到需要生成目录的文件夹下，然后输入</p><pre><code>tree -L 4 -I &quot;node_modules&quot; &gt; README.md</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;markdown 自动生成项目目录结构&lt;/p&gt;
+&lt;h4 id=&quot;安装插件-tree&quot;&gt;&lt;a href=&quot;#安装插件-tree&quot; class=&quot;headerlink&quot; title=&quot;安装插件 tree&quot;&gt;&lt;/a&gt;安装插件 tree&lt;/h4&gt;&lt;pre&gt;&lt;code&gt;npm i t
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>TypeScript（三）：引用数据类型与泛型</title>
@@ -482,31 +504,6 @@
       
       
         &lt;h3 id=&quot;Form表单中-分类选项，选中之后，得到后台返回的ID，这里是GitHub&quot;&gt;&lt;a href=&quot;#Form表单中-分类选项，选中之后，得到后台返回的ID，这里是GitHub&quot; class=&quot;headerlink&quot; title=&quot;Form表单中 分类选项，选中之后，
-      
-    
-    </summary>
-    
-      <category term="微信小程序" scheme="http://gengaiwei.com/categories/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-      <category term="微信小程序" scheme="http://gengaiwei.com/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>微信小程序 轮播图/跑马灯</title>
-    <link href="http://gengaiwei.com/2018/03/08/wxSwiper/"/>
-    <id>http://gengaiwei.com/2018/03/08/wxSwiper/</id>
-    <published>2018-03-08T08:20:14.000Z</published>
-    <updated>2020-07-24T08:59:53.298Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Swiper-轮播图-也可做成跑马灯-就像信息提示-公告-在这里都是左右滚动"><a href="#Swiper-轮播图-也可做成跑马灯-就像信息提示-公告-在这里都是左右滚动" class="headerlink" title="Swiper 轮播图 也可做成跑马灯 就像信息提示/公告 在这里都是左右滚动"></a>Swiper 轮播图 也可做成跑马灯 就像信息提示/公告 在这里都是左右滚动</h3><blockquote><p>1.swiper 轮播图 wxml</p></blockquote><pre><code>&lt;view class=&apos;lunBo&apos;&gt;    &lt;swiper class=&apos;swiper&apos; indicator-dots=&apos;true&apos; autoplay=&apos;true&apos; interval=&apos;3000&apos; duration=&apos; 200&apos; circular=&apos;true&apos;&gt;        &lt;block wx:for=&quot;{{lunBoimgUrls}}&quot; wx:key=&quot;&quot;&gt;            &lt;swiper-item&gt;                &lt;image src=&quot;{{item}}&quot; class=&quot;lunBo-image&quot; /&gt;            &lt;/swiper-item&gt;        &lt;/block&gt;    &lt;/swiper&gt;&lt;/view&gt;</code></pre><blockquote><p>2.swiper 跑马灯 wxml</p></blockquote><pre><code>&lt;!--跑马灯  --&gt;&lt;view class=&apos;share-tips&apos;&gt;    &lt;view class=&apos;my-center&apos;&gt;        &lt;text class=&apos;tips-f&apos;&gt;公告：&lt;/text&gt;         &lt;swiper class=&apos;tips-k&apos;  autoplay  interval=&apos;5000&apos; duration=&apos;3000&apos; circular=&apos;true&apos; &gt;            &lt;swiper-item wx:key=&quot;&quot; wx:for=&apos;{{tipsText}}&apos;&gt;                &lt;view&gt;{{item}}&lt;/view&gt;            &lt;/swiper-item&gt;        &lt;/swiper&gt;    &lt;/view&gt;&lt;/view&gt;</code></pre><blockquote><p>3.swiper 轮播图/跑马灯 wxss</p></blockquote><pre><code>.lunBo-k{height: 0px;}.lunBo{position: absolute;top:-54px;left: 0px;width: 100%;height: 158px;border-radius: 8px;}.lunBo swiper {height: 100%;}.lunBo swiper swiper-item{width: 100%;border-radius: 8px; }.lunBo-image{width: 100%;height: 158px; border-radius: 8px; }.tips-f{width: 20%;font-size: 0.6rem;height: 24px;line-height: 24px;float: left;}.tips-k{width: 80%;height: 24px;overflow: hidden;font-size: 12px;display: inline-block;}</code></pre><blockquote><p>4.swiper 轮播图/跑马灯 js</p></blockquote><pre><code>data: {    lunBoimgUrls: [    &apos;http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg&apos;,    &apos;http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg&apos;,    &apos;http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg&apos;,    ],    tipsText: [    &apos;我是第一条滚动的啊哈哈哈哈哈哈哈哈哈&apos;,    &apos;我是第二条滚动的啊哈哈哈哈哈哈哈哈哈&apos;,    &apos;我是第三条滚动的啊哈哈哈哈哈哈哈哈哈&apos;,    ],},</code></pre>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;Swiper-轮播图-也可做成跑马灯-就像信息提示-公告-在这里都是左右滚动&quot;&gt;&lt;a href=&quot;#Swiper-轮播图-也可做成跑马灯-就像信息提示-公告-在这里都是左右滚动&quot; class=&quot;headerlink&quot; title=&quot;Swiper 轮播图 也可做成跑
       
     
     </summary>
